@@ -12,16 +12,17 @@ LaunchOneNote() {
 }
 
 ; Function to open GitHub in the default browser
-OpenGitHub() {
-    Run githubUrl
+OpenWebsites() {
+    Run moodleUrl
+    Run officeUrl
 }
 
 ; Main function to launch both
-LaunchVSCodeAndGitHub() {
+LaunchUniSetup() {
     LaunchOneNote()
     Sleep 1000  ; Wait for 1 seconds
-    OpenGitHub()
+    OpenWebsites()
 }
 
 ; Hotkey to trigger the script (Ctrl+Alt+Shift+U)
-^!+u:: LaunchVSCodeAndGitHub()
+^!+u:: LaunchUniSetup()
