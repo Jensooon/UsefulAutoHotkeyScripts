@@ -3,11 +3,11 @@
 #Include filePaths.ahk
 
 ; Function to launch VS Code
-LaunchVSCode() {
-    if FileExist(vsCodePath) {
-        Run(vsCodePath)
+LaunchOneNote() {
+    if FileExist(oneNotePath) {
+        Run(oneNotePath)
     } else {
-        MsgBox("VS Code executable not found. Please check the path.")
+        MsgBox("One note executable not found. Please check the path.")
     }
 }
 
@@ -18,10 +18,10 @@ OpenGitHub() {
 
 ; Main function to launch both
 LaunchVSCodeAndGitHub() {
-    LaunchVSCode()
+    LaunchOneNote()
     Sleep 1000  ; Wait for 1 seconds
     OpenGitHub()
 }
 
-; Hotkey to trigger the script (Ctrl+Alt+Shift+G)
-^!+g:: LaunchVSCodeAndGitHub()
+; Hotkey to trigger the script (Ctrl+Alt+Shift+U)
+^!+u:: LaunchVSCodeAndGitHub()
